@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: antonio-vivaldi-chatbot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: OPENAI_API_KEY
+        value: ssk-proj-6_0Hd_5sUzjyDdPmMjqy02SpzdEnVD4VBRWU2jaj7IX3xZsJ7seQMyeTc5C5uCnsGXuVxmNTP0T3BlbkFJgJ7krNO0BsyoOyX5khTc00PjD-9GgmUX1GZSzoTIy8Iv8i_jx8TeQ_F6PWbvzKqTsNWDZWySQA
+      - key: ASSISTANT_ID
+        value: asst_SLR8SYM6fYdNieSFtqGczmjT
